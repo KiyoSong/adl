@@ -1,0 +1,444 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Nav bar styling */
+.navbar {
+    background-color: white;
+    color: rgb(255, 255, 255);
+    padding: 0.5em;
+    width: 100%;
+    position: sticky;
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it’s on top of other content */
+}
+.nav-container {
+    margin-right: 100px;
+}
+.navbar nav {
+    display: flex;
+    align-items: center; /* Align logo and menu items vertically */
+    justify-content: space-between; /* Space out the logo and menu items */
+    padding: 0 20px; /* Add padding to the sides */
+}
+
+.navbar .logo img {
+    height: 130px; 
+}
+.navbar nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.navbar li {
+    position: relative;
+}
+.navbar > ul > li {
+    float: left;
+}
+
+.navbar nav ul li {
+    margin: 10px 30px; /* Space between navigation items */
+}
+
+.navbar a {
+    color: rgb(7, 6, 6);
+    text-decoration: none;
+    padding: 10px 15px; /* Add padding to the links */
+    display: block; /* Ensure links fill the padding area */
+    font-size: 16px;
+    line-height: 1.5;
+}
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+.navbar nav ul li a:hover {
+    background-color: #000000; /* Change background on hover */
+    border-radius: 18px; /* Rounded corners on hover */
+    color:white;
+    text-decoration: underline; 
+}
+
+
+.nav-sub-section {
+    display: none;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+  }
+  .nav-sub-section a {
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .nav-sub-section a:hover {
+    background-color: #000000;
+    opacity: 1;
+    visibility: visible;
+  }
+  .navbar li:hover .nav-sub-section {
+    display: block;
+    background-color: #f8f6f5;
+    border-radius: 12px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+
+@media (max-width: 600px) {
+    .menu-logo {
+        width: 100%;
+        max-width: 10px;
+        display: block; 
+    }
+    .nav-menu {
+        display: inline-flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-menu a {
+        margin: 30px 0;
+        font-size:12px;
+    }
+    
+    .nav-menu.active {
+        display: flex; 
+    }
+}
+
+
+
+
+
+h1 {
+    color: #333;
+}
+
+p {
+    padding: 1em;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.roboto-mono {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+.text-centre {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    align-items: center; 
+    font-weight: 600;
+    height: 80px; 
+    margin: 120px 0 -30px 0;
+}
+.text-center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-box {
+    padding: 2px;
+    max-width: 900px;
+    text-align: justify;
+}
+.montserrat{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
+.centred-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+#logo {
+    width: 150px; 
+    height: auto;
+}
+
+
+
+
+
+
+/* Header styling */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.header img {
+    width: 100px; /* Adjust the size of the logo */
+    height: auto;
+}
+
+/* Posters section styling */
+.poster-section-wrapper {
+    position: relative;
+    display: felx;
+    overflow-x: hidden;
+    padding: 20px;
+    gap: 20px;
+}
+.poster-section {
+    display: flex;
+    gap: 20px;
+    cursor: url('images/circle-cursor.png'), auto;
+    scroll-behavior: smooth;
+}
+
+.poster-section.active {
+    cursor: url('images/circle-cursor.png'), grabbing;
+}
+
+.poster {
+    flex: 0 0 auto; /* Prevent flex items from shrinking or growing */
+    width: 600px;
+    height: 780px;
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow for images */
+}
+
+.poster img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+
+/* Profiles section styling */
+.profiles {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of profile items */
+    justify-content: center; /* Centers items horizontally */
+    gap: 20px; /* Space between items */
+    margin: 20px 0;
+}
+
+.profile {
+    background: #fff;
+    border-radius: 10px;
+    /*box-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.2); */
+    padding: 30px;
+    text-align: center;
+    width: 200px; /* Set a fixed width for the profile boxes */
+}
+
+.profile img {
+    width: 150px; /* Set the width of the image */
+    height: 150px; /* Set the height of the image to the same value as width for a circle */
+    border-radius: 80%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the circular area without stretching */
+    margin-bottom: 20px;
+}
+
+.profile h2 {
+    margin: 10px 0 5px;
+    font-size: 10px;
+}
+
+.profile p {
+    margin: 0;
+    color: #666;
+}
+
+
+/* Collaborator Partner section styling */
+.partners {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of profile items */
+    justify-content: center; /* Centers items horizontally */
+    gap: 20px; /* Space between items */
+    margin: 20px 0;
+}
+
+.partner-logo {
+    background: #fff;
+    border-radius: 10px;
+    /*box-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.2); */
+    padding: 30px;
+    text-align: center;
+    width: 200px; /* Set a fixed width for the profile boxes */
+}
+
+.partner img {
+    width: 150px; /* Set the width of the image */
+    height: 150px; /* Set the height of the image to the same value as width for a circle */
+    border-radius: 80%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the circular area without stretching */
+    margin-bottom: 20px;
+}
+
+
+
+
+#profile-name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.profile-role {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 600;  
+}
+.profile-location {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 10px;
+    font-weight: 600;  
+}
+
+
+
+#intro-video {
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+
+.video {
+    width: 100%;
+    align-items: center;
+    max-width: 1400px;
+    margin-top: 200px;
+    margin-bottom: 20px;
+}
+
+
+
+
+.interview-poster-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.interview-poster-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 80px;
+}     
+
+.interview-poster {
+    flex: 0 0 auto; /* Prevent flex items from shrinking or growing */
+    width: 500px;
+    height: 680px;
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow for images */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.interview-poster img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+
+
+/*interview in detail styling*/
+.interview-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.interview-poster-detail {
+    flex: 0 0 auto; /* Prevent flex items from shrinking or growing */
+    width: 500px;
+    height: 950px;
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow for images */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position:sticky;
+    top: 180px;
+    
+}
+.interview-container {
+    display: flex;
+
+}
+.interview-poster-detail img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.interviews {
+    max-width: 800px;
+}
+
+
+.contact {
+    display: block;
+    margin: 100px;
+}
+
+.contact ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -29px;
+}
+.contact-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+}
+.email-link {
+    text-decoration: none; /* Remove the underline */
+    color: black;
+    font-weight: 400px;
+    font-family: Arial, sans-serif; /* Set a font family */
+    padding: 6px; /* Add some padding around the text */
+    border-radius: 5px; /* Round the corners of the border */
+}
+
+
+footer {
+    font-size: 10px;
+    margin-top: 100px;
+}
