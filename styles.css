@@ -23,7 +23,7 @@ body {
     display: flex;
     align-items: center; /* Align logo and menu items vertically */
     justify-content: space-between; /* Space out the logo and menu items */
-    padding: 0 20px; /* Add padding to the sides */
+    padding: 0 15px; /* Add padding to the sides */
 }
 
 .navbar .logo img {
@@ -51,7 +51,7 @@ body {
     text-decoration: none;
     padding: 10px 15px; /* Add padding to the links */
     display: block; /* Ensure links fill the padding area */
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
 }
 .navbar a:hover {
@@ -96,7 +96,7 @@ body {
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
     .menu-logo {
         width: 100%;
         max-width: 10px;
@@ -109,15 +109,46 @@ body {
     }
 
     .nav-menu a {
-        margin: 30px 0;
-        font-size:12px;
+        margin: 10px 0;
+        font-size:10px;
     }
     
     .nav-menu.active {
         display: flex; 
     }
+    .profile img {
+        width: 80px; 
+        height: auto; 
+        border-radius: 80%; 
+        object-fit: cover; 
+        margin-bottom: 5px;
+    }
+    .partner img {
+        width: 50px; /* Set the width of the image */
+        height: 50px; /* Set the height of the image to the same value as width for a circle */
+        border-radius: 50%; /* Makes the image circular */
+        object-fit: cover; /* Ensures the image covers the circular area without stretching */
+        margin-bottom: 5px;
+    }
+    .interview-poster-detail {
+        flex: 0 0 auto; /* Prevent flex items from shrinking or growing */
+        width: 150px;
+        height: 350px;
+        border-radius: 6px; /* Rounded corners */
+        overflow: hidden; /* Hide overflow for images */
+        text-align: center;
+        padding: 8px;
+        box-sizing: border-box;
+        position:sticky;
+        top: 50px;
+    }
+    .poster {
+        flex: 0 0 auto; /* Prevent flex items from shrinking or growing */
+        width: 200px;
+        height: 480px;
+        border-radius: 5px; /* Rounded corners */
+    }
 }
-
 
 
 
