@@ -1,11 +1,3 @@
-* {
-    outline: 1px solid red; /* Temporarily add outlines to all elements for debugging */
-}
-
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
 html, body {
     font-family: "Montserrat", sans-serif;
     margin: 0;
